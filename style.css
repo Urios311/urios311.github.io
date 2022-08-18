@@ -8,7 +8,6 @@ html, body {
 .menu {
     position: fixed; 
     float: left;
-
     width: 15%;
     background: black;
     
@@ -144,6 +143,14 @@ input[type=checkbox] {
   padding: 10px;
 }
 
-a {
-  target: "_blank";
+.info {
+  float:left;
+  color: white;
+  text-align: center;
+  width: 452px;
+  height: 60px;
+  text
+  background: black;
+  border: 7px solid rgb(0, 0, 255);
+  position: relative;
 }
