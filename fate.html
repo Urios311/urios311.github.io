@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
     <script>
         
     </script>
@@ -106,30 +105,33 @@
 
    <div class="block"><a href="https://myanimelist.net/anime/41497/Fate_Grand_Order__Shuukyoku_Tokuiten_-_Kani_Jikan_Shinden_Solomon" target="_blank"><img id="" src="https://cdn.myanimelist.net/images/anime/1507/114957.jpg"></a><input type="checkbox" id="38" class="box"></input></div>
 
+   <script>
+
+    let boxes = document.getElementsByClassName('box').length;
+
+    function save() {	
+      for(let i = 1; i <= boxes; i++){
+          var checkbox = document.getElementById(String(i));
+        localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+      }
+    }
+    
+    //for loading
+    for(let i = 1; i <= boxes; i++){
+      if(localStorage.length > 0){
+        var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+        document.getElementById(String(i)).checked = checked;
+      }
+    }
+    window.addEventListener('change', save);
+
+</script>
+
+
 
     </div>
 
-    <script>
 
-      let boxes = document.getElementsByClassName('box').length;
-  
-      function save() {	
-        for(let i = 1; i <= boxes; i++){
-            var checkbox = document.getElementById(String(i));
-          localStorage.setItem("checkbox" + String(i), checkbox.checked);	
-        }
-      }
-      
-      //for loading
-      for(let i = 1; i <= boxes; i++){
-        if(localStorage.length > 0){
-          var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
-          document.getElementById(String(i)).checked = checked;
-        }
-      }
-      window.addEventListener('change', save);
-  
-  </script>
 
 </body>
 
