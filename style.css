@@ -1,0 +1,149 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+}
+
+.menu {
+    position: fixed; 
+    float: left;
+
+    width: 15%;
+    background: black;
+    
+}
+
+img { 
+    width: 152px;
+    height: 225px;
+    border: 3px solid #000;
+    border-radius: 7%;
+    display: block;
+}
+    
+
+.block {
+    float:left;
+    width: 152px;
+    height: 225px;
+    background: black;
+    border: 7px solid #001;
+    position: relative;
+ }
+
+ .all {
+    position: static;
+    margin-left: 20%;
+    background: black;
+    width: 80%;
+    height: 100%;
+ }
+
+ ul {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    font-size:18px;
+    height:2em;
+    line-height:3em;
+    text-align:center;
+  }
+
+
+  ul a {
+    display:block;
+    text-decoration:none;
+    color: cyan;
+    padding:0 5px;
+  }
+
+  ul > li {
+    float:left;
+    width:117%;
+    margin-left:1px;
+    background-color: rgb(20, 34, 34);
+    border: 1px;
+    height:3em;
+  }
+
+  ul > li > ul >li {
+    float:left;
+    width:100%;
+    margin-left:0px;
+    background-color:#2fd394;
+    height:2.5em;
+  }
+
+  /* wygląd elementu - li - pierwszego dziecka elementu - ol */
+  ul > li:first-child {
+    margin-left:0;
+  }
+
+  /* wygląd elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+  ul > li:hover {
+    background-color:rgb(55, 102, 102);;
+  }
+
+  /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+  ul > li:hover > a {
+    color:#09C;
+  }
+
+  /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+  ul > li:hover > ul {
+    display:block;
+  }
+
+  /* ------------------------CZĘŚĆ-ROZWIJANA-MENU------------------------ */
+
+  /* wygląd głównych rozwijanych elementów - ul */
+  ul > li > ul {
+    display:none;
+    list-style-type:none;
+    padding:0;
+    margin:0;
+  }
+
+  /* wygląd elementu - li - w części rozwijanej */
+  ul > li > ul > li {
+    position:relative;
+    background-color:rgb(20, 34, 34);;
+  }
+
+  /* wygląd elementu - a - w części rozwijanej */
+  ul > li > ul > li > a {
+    border-top:1px solid rgb(20, 34, 34);;
+  }
+
+  /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+  ul > li > ul > li:hover {
+    background-color:rgb(20, 34, 34);;
+  }
+
+  /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+  ul > li > ul > li:hover > a {
+    color:#09C;
+  }
+
+.box {
+  position: absolute;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  bottom: 0px;
+  right: 0px;
+  
+}
+
+input[type=checkbox] {
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+a {
+  target: "_blank";
+}
